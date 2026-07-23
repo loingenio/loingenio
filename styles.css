@@ -129,3 +129,11 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 @media(hover:none){.collage-photo:hover img,.intro-photo:hover img,.resource-card:hover,.course-item:hover{transform:none}}
 @media(update:slow){.marquee div{animation:none;transform:none}.reveal{opacity:1;transform:none;transition:none}.collage-photo img,.intro-photo img{transition:none}}
 @media(prefers-reduced-motion:reduce){.mini-testimonial.active{animation:none}.collage-photo img,.intro-photo img{transition:none}}
+
+/* Recurso real destacado en el Home: la tarjeta completa abre su ficha, sin botón de descarga. */
+.resource-card-image{background:#fff;padding:0;overflow:hidden}
+.resource-card-image .resource-meta{padding:24px 26px 16px}
+.resource-card-image>img{display:block;width:calc(100% - 32px);height:190px;margin:0 16px 20px;border-radius:16px;object-fit:cover}
+.resource-card-image h3,.resource-card-image p{margin-left:26px;margin-right:26px}
+.resource-card-image p{margin-bottom:28px}
+.resource-card-image:focus-visible{outline:4px solid var(--yellow);outline-offset:4px}
