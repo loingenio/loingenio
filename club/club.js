@@ -2,13 +2,18 @@ const header = document.querySelector('[data-header]');
 const menu = document.querySelector('#menu');
 const menuToggle = document.querySelector('.menu-toggle');
 const progress = document.querySelector('[data-progress]');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+let scrollFrame = 0;
 
 const onScroll = () => {
   header?.classList.toggle('scrolled', window.scrollY > 18);
   const max = document.documentElement.scrollHeight - innerHeight;
   if (progress) progress.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+  scrollFrame = 0;
 };
-addEventListener('scroll', onScroll, { passive: true });
+addEventListener('scroll', () => {
+  if (!scrollFrame) scrollFrame = requestAnimationFrame(onScroll);
+}, { passive: true });
 onScroll();
 
 menuToggle?.addEventListener('click', () => {
@@ -20,13 +25,18 @@ menu?.querySelectorAll('a').forEach(link => link.addEventListener('click', () =>
   menuToggle.setAttribute('aria-expanded', 'false');
 }));
 
-const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('visible');
-    revealObserver.unobserve(entry.target);
-  }
-}), { threshold: .12 });
-document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && !reducedMotion.matches) {
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  }), { rootMargin: '0px 0px -5% 0px', threshold: .08 });
+  reveals.forEach(element => revealObserver.observe(element));
+} else {
+  reveals.forEach(element => element.classList.add('visible'));
+}
 
 const demoContent = {
   crea: ['Imagina tu mundo', 'Transforma una idea en personajes, reglas y desafíos.'],
@@ -51,15 +61,27 @@ document.querySelector('[data-play]')?.addEventListener('click', event => {
   event.currentTarget.setAttribute('aria-label', playing ? 'Pausar demostración' : 'Activar demostración');
 });
 
-if (matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference)').matches) {
-  document.querySelector('.club-hero')?.addEventListener('pointermove', event => {
-    const x = (event.clientX / innerWidth - .5) * 18;
-    const y = (event.clientY / innerHeight - .5) * 18;
-    document.querySelectorAll('[data-depth]').forEach(el => {
-      const depth = Number(el.dataset.depth);
-      el.style.translate = `${x * depth}px ${y * depth}px`;
+if (matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference) and (update:fast)').matches) {
+  const hero = document.querySelector('.club-hero');
+  const depthElements = [...document.querySelectorAll('[data-depth]')];
+  let pointerFrame = 0;
+  let pointerX = 0;
+  let pointerY = 0;
+  hero?.addEventListener('pointermove', event => {
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+    if (pointerFrame) return;
+    pointerFrame = requestAnimationFrame(() => {
+      const x = (pointerX / innerWidth - .5) * 18;
+      const y = (pointerY / innerHeight - .5) * 18;
+      depthElements.forEach(element => {
+        const depth = Number(element.dataset.depth);
+        element.style.translate = `${x * depth}px ${y * depth}px`;
+      });
+      pointerFrame = 0;
     });
-  });
+  }, { passive: true });
 }
 
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+const year = document.querySelector('[data-year]');
+if (year) year.textContent = new Date().getFullYear();

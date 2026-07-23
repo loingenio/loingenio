@@ -5,7 +5,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important}}
 
 /* Identidad oficial Lo Ingenio */
-body{font-family:Inter,-apple-system,system-ui,sans-serif}h1,h2,h3,.marquee div{font-family:Inter,-apple-system,system-ui,sans-serif}.logo{height:38px;gap:0}.logo img{display:block;width:auto;height:100%}.site-header.scrolled{background:rgba(255,255,255,.9);box-shadow:0 1px rgba(16,22,42,.08)}.button{background:var(--blue);box-shadow:0 10px 24px rgba(41,112,255,.18)}.hero{background:radial-gradient(circle at 78% 22%,rgba(53,201,232,.15),transparent 28%),linear-gradient(135deg,#fff 20%,#eef3ff)}.hero h1 em,.cta-section h2 em{font-family:Gloock,serif;font-style:italic;font-weight:400;color:var(--blue)}.main-card{background:linear-gradient(145deg,var(--blue),var(--ink-2))}.route-panel{background:#eef3ff}.route-art{background:var(--blue);color:#fff}.resources{background:var(--ink-2)}.resource-card.cream{background:var(--yellow)}.benefits{background:#eef3ff}.cta-section{background:var(--blue);color:#fff}.cta-section h2 em{color:var(--yellow)}.cta-inner .eyebrow span{background:var(--yellow)}footer{background:var(--ink-2)}.footer-logo{height:43px}.footer-logo img{height:100%}.course-date strong,.big-ring strong,.quote blockquote,.art-number{font-family:Inter,-apple-system,system-ui,sans-serif}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1,h2,h3,.marquee div{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.logo{height:38px;gap:0}.logo img{display:block;width:auto;height:100%}.site-header.scrolled{background:rgba(255,255,255,.96);box-shadow:0 1px rgba(16,22,42,.08)}.button{background:var(--blue);box-shadow:0 10px 24px rgba(41,112,255,.18)}.hero{background:radial-gradient(circle at 78% 22%,rgba(53,201,232,.15),transparent 28%),linear-gradient(135deg,#fff 20%,#eef3ff)}.hero h1 em,.cta-section h2 em{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;color:var(--blue)}.main-card{background:linear-gradient(145deg,var(--blue),var(--ink-2))}.route-panel{background:#eef3ff}.route-art{background:var(--blue);color:#fff}.resources{background:var(--ink-2)}.resource-card.cream{background:var(--yellow)}.benefits{background:#eef3ff}.cta-section{background:var(--blue);color:#fff}.cta-section h2 em{color:var(--yellow)}.cta-inner .eyebrow span{background:var(--yellow)}footer{background:var(--ink-2)}.footer-logo{height:43px}.footer-logo img{height:100%}.course-date strong,.big-ring strong,.quote blockquote,.art-number{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 @media(max-width:600px){.logo{height:31px}.footer-logo{height:37px}}
 
 /* Paleta secundaria oficial: energía, diversidad y emociones positivas */
@@ -97,9 +97,9 @@ body{font-family:Inter,-apple-system,system-ui,sans-serif}h1,h2,h3,.marquee div{
 @media(max-width:600px){.hero-photo-collage{height:440px;margin-top:18px}.collage-main{inset:38px 90px 30px 4px;border-width:5px;border-radius:23px}.collage-project{width:135px;height:170px;right:0;top:8px;border-width:5px;border-radius:19px}.collage-achievement{width:130px;height:168px;right:0;bottom:5px;border-width:5px;border-radius:19px}.collage-label{left:-3px;min-width:120px;padding:13px 16px}.collage-label span{font-size:12px}.collage-label strong{font-size:18px}.photo-caption{left:12px;right:12px;bottom:12px;padding:9px 11px;font-size:10px}}
 
 /* Movimiento continuo de la franja principal */
-.marquee div{width:max-content;min-width:0;justify-content:flex-start;align-items:center;gap:30px;animation:marquee-scroll 20s linear infinite;will-change:transform}
+.marquee div{width:max-content;min-width:0;justify-content:flex-start;align-items:center;gap:30px;animation:marquee-scroll 28s linear infinite}
 .marquee b{color:var(--blue)}
-@keyframes marquee-scroll{to{transform:translateX(-50%)}}
+@keyframes marquee-scroll{to{transform:translate3d(-50%,0,0)}}
 
 /* Testimonios breves del punto de partida */
 .intro-grid{grid-template-areas:"index index" "visual copy" "quotes quotes";grid-template-columns:.9fr 1.1fr;align-items:stretch;gap:24px 90px}
@@ -110,13 +110,22 @@ body{font-family:Inter,-apple-system,system-ui,sans-serif}h1,h2,h3,.marquee div{
 .intro-photo:hover img{transform:scale(1.025)}
 .intro-copy{grid-area:copy;display:flex;align-items:center;padding:0}
 .intro-copy h2{margin:0}
-.mini-testimonials{grid-area:quotes;position:relative;min-height:96px;margin-top:8px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 14px 35px rgba(16,22,42,.07);overflow:hidden}
-.mini-testimonial{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:22px 66px 22px 24px;opacity:0;transform:translateY(9px);pointer-events:none;transition:opacity .45s,transform .45s}
-.mini-testimonial.active{opacity:1;transform:none}
+.mini-testimonials{grid-area:quotes;position:relative;min-height:96px;margin-top:8px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 25px rgba(16,22,42,.06);overflow:hidden;contain:layout paint}
+.mini-testimonial{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:22px 66px 22px 24px;pointer-events:none}
+.mini-testimonial.active{display:flex;animation:mini-testimonial-in .32s ease-out both}
 .mini-testimonial p{margin:0 0 7px!important;color:var(--ink)!important;font-size:15px!important;font-weight:700;line-height:1.35}
 .mini-testimonial small{color:#778196;font-size:9px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .mini-testimonial-progress{position:absolute;right:22px;top:50%;display:flex;flex-direction:column;gap:6px;transform:translateY(-50%)}
 .mini-testimonial-progress span{display:block;width:5px;height:5px;border-radius:50%;background:#cbd2df;transition:.3s}
 .mini-testimonial-progress span.active{height:21px;border-radius:5px;background:var(--blue)}
+@keyframes mini-testimonial-in{from{opacity:0;transform:translate3d(0,6px,0)}to{opacity:1;transform:none}}
 @media(max-width:900px){.intro-grid{grid-template-areas:"index" "visual" "copy" "quotes";grid-template-columns:1fr;gap:24px}.intro-visual{min-height:340px}.intro-copy{max-width:none}.mini-testimonials{margin-top:0}}
 @media(max-width:600px){.intro-visual{min-height:300px}.mini-testimonials{min-height:112px}.mini-testimonial{padding:20px 50px 20px 18px}.mini-testimonial p{font-size:14px!important}}
+
+/* Rendimiento: el navegador omite el dibujo de secciones fuera de pantalla. */
+.section{content-visibility:auto;contain-intrinsic-size:1px 760px}
+.collage-photo,.intro-photo{contain:layout paint}
+.site-header.scrolled{backdrop-filter:none}
+@media(hover:none){.collage-photo:hover img,.intro-photo:hover img,.resource-card:hover,.course-item:hover{transform:none}}
+@media(update:slow){.marquee div{animation:none;transform:none}.reveal{opacity:1;transform:none;transition:none}.collage-photo img,.intro-photo img{transition:none}}
+@media(prefers-reduced-motion:reduce){.mini-testimonial.active{animation:none}.collage-photo img,.intro-photo img{transition:none}}

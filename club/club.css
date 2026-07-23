@@ -83,4 +83,17 @@ footer{background:var(--navy);color:#fff;padding:75px 0 25px}.footer-grid{displa
 /* Franja global, idéntica al home */
 .club-hero:after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:34px;background:var(--yellow)}
 .ticker{z-index:2;border:0;bottom:-1px;transform:rotate(-1.2deg) scale(1.035);padding:13px 0}
-.ticker div{width:max-content;min-width:1000px;justify-content:flex-start;gap:30px;letter-spacing:.08em;animation:ticker 20s linear infinite}
+.ticker div{width:max-content;min-width:1000px;justify-content:flex-start;gap:30px;letter-spacing:.08em;animation:ticker 28s linear infinite}
+
+/* Rendimiento: tipografía local, menos repintados y animación adaptable. */
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.section-heading h2 em,.hero-copy h1 em{font-family:Georgia,"Times New Roman",serif}
+.site-header.scrolled{background:rgba(255,255,255,.96);backdrop-filter:none}
+.section-nav{background:rgba(255,255,255,.97);backdrop-filter:none}
+.photo-label{background:rgba(0,44,114,.78);backdrop-filter:none}
+.section{content-visibility:auto;contain-intrinsic-size:1px 780px}
+.purpose-explorer,.course-product,.essence-card{contain:layout paint}
+.ticker div{animation-duration:28s}
+@keyframes ticker{to{transform:translate3d(-50%,0,0)}}
+@media(hover:none){.button:hover,.value-card:hover,.resource-card:hover,.essence-card:hover .essence-copy{transform:none}}
+@media(update:slow){.ticker div,.orbit-b,.game-stage.playing .game-player,.game-stage.playing .game-star{animation:none}.reveal{opacity:1;transform:none;transition:none}.scroll-progress{display:none}}
