@@ -9,3 +9,16 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 document.querySelector('[data-year]').textContent=new Date().getFullYear();
+
+const miniTestimonials=document.querySelectorAll('.mini-testimonial');
+const miniTestimonialDots=document.querySelectorAll('.mini-testimonial-progress span');
+if(miniTestimonials.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let miniTestimonialIndex=0;
+  setInterval(()=>{
+    miniTestimonials[miniTestimonialIndex].classList.remove('active');
+    miniTestimonialDots[miniTestimonialIndex]?.classList.remove('active');
+    miniTestimonialIndex=(miniTestimonialIndex+1)%miniTestimonials.length;
+    miniTestimonials[miniTestimonialIndex].classList.add('active');
+    miniTestimonialDots[miniTestimonialIndex]?.classList.add('active');
+  },4500);
+}
