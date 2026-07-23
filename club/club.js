@@ -61,27 +61,5 @@ document.querySelector('[data-play]')?.addEventListener('click', event => {
   event.currentTarget.setAttribute('aria-label', playing ? 'Pausar demostración' : 'Activar demostración');
 });
 
-if (matchMedia('(pointer:fine) and (prefers-reduced-motion:no-preference) and (update:fast)').matches) {
-  const hero = document.querySelector('.club-hero');
-  const depthElements = [...document.querySelectorAll('[data-depth]')];
-  let pointerFrame = 0;
-  let pointerX = 0;
-  let pointerY = 0;
-  hero?.addEventListener('pointermove', event => {
-    pointerX = event.clientX;
-    pointerY = event.clientY;
-    if (pointerFrame) return;
-    pointerFrame = requestAnimationFrame(() => {
-      const x = (pointerX / innerWidth - .5) * 18;
-      const y = (pointerY / innerHeight - .5) * 18;
-      depthElements.forEach(element => {
-        const depth = Number(element.dataset.depth);
-        element.style.translate = `${x * depth}px ${y * depth}px`;
-      });
-      pointerFrame = 0;
-    });
-  }, { passive: true });
-}
-
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = new Date().getFullYear();
