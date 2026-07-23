@@ -38,28 +38,5 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
   reveals.forEach(element => element.classList.add('visible'));
 }
 
-const demoContent = {
-  crea: ['Imagina tu mundo', 'Transforma una idea en personajes, reglas y desafíos.'],
-  aprende: ['Prueba y mejora', 'Descubre lógica y resolución de problemas mientras construyes.'],
-  comparte: ['Hazlo jugar', 'Presenta tu proyecto y celebra todo lo que aprendiste.']
-};
-document.querySelectorAll('[data-demo]').forEach(button => button.addEventListener('click', () => {
-  const [title, copy] = demoContent[button.dataset.demo];
-  document.querySelectorAll('[data-demo]').forEach(item => {
-    item.classList.toggle('active', item === button);
-    item.setAttribute('aria-selected', String(item === button));
-  });
-  document.querySelector('[data-demo-title]').textContent = title;
-  document.querySelector('[data-demo-copy]').textContent = copy;
-  document.querySelector('[data-game-stage]').animate([{ transform: 'scale(.985)' }, { transform: 'scale(1)' }], { duration: 280 });
-}));
-
-document.querySelector('[data-play]')?.addEventListener('click', event => {
-  const playing = document.querySelector('[data-game-stage]').classList.toggle('playing');
-  event.currentTarget.classList.toggle('active', playing);
-  event.currentTarget.querySelector('span').textContent = playing ? 'Ⅱ' : '▶';
-  event.currentTarget.setAttribute('aria-label', playing ? 'Pausar demostración' : 'Activar demostración');
-});
-
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = new Date().getFullYear();
