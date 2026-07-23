@@ -105,3 +105,14 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 @keyframes ticker{to{transform:translate3d(-50%,0,0)}}
 @media(hover:none){.button:hover,.value-card:hover,.resource-card:hover,.essence-card:hover .essence-copy{transform:none}}
 @media(update:slow){.ticker div,.orbit-b{animation:none}.reveal{opacity:1;transform:none;transition:none}.scroll-progress{display:none}}
+
+/* Navegación táctil: objetivos grandes, respuesta inmediata y sin recortes. */
+a,button{touch-action:manipulation;-webkit-tap-highlight-color:rgba(41,112,255,.18)}
+@media(max-width:620px){
+  .section-nav{top:72px;overflow:visible}
+  .section-nav .container{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:min(100% - 20px,420px);gap:6px;padding:8px 0}
+  .section-nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:7px 9px;border:1px solid var(--line);border-radius:12px;background:#fff;text-align:center;font-size:10px;line-height:1.2;white-space:normal}
+  .section-nav a:active{background:#e7efff;color:var(--blue)}
+  section[id]{scroll-margin-top:190px}
+}
+@media(max-width:950px){.main-nav a{display:flex;align-items:center;justify-content:center;min-height:44px;text-align:center}}

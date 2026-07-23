@@ -40,3 +40,11 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
 
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = new Date().getFullYear();
+
+document.querySelectorAll('.section-nav a').forEach(link => link.addEventListener('click', event => {
+  const target = document.querySelector(link.hash);
+  if (!target) return;
+  event.preventDefault();
+  target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+  history.replaceState(null, '', link.hash);
+}));
