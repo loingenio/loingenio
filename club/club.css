@@ -116,3 +116,11 @@ a,button{touch-action:manipulation;-webkit-tap-highlight-color:rgba(41,112,255,.
   section[id]{scroll-margin-top:190px}
 }
 @media(max-width:950px){.main-nav a{display:flex;align-items:center;justify-content:center;min-height:44px;text-align:center}}
+
+/* Recurso disponible: portada real sin cargar el PDF completo. */
+.resource-available{background:#fff;color:var(--ink)}
+.resource-available:hover{background:#fff}
+.resource-cover{height:205px;margin:25px 0 22px;border:2px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:8px 8px 0 var(--yellow)}
+.resource-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.resource-available p{color:#586579}
+.resource-available>a{color:var(--blue)}
