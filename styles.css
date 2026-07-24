@@ -110,7 +110,7 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 .intro-photo:hover img{transform:scale(1.025)}
 .intro-copy{grid-area:copy;display:flex;align-items:center;padding:0}
 .intro-copy h2{margin:0}
-.mini-testimonials{grid-area:quotes;position:relative;min-height:96px;margin-top:8px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 25px rgba(16,22,42,.06);overflow:hidden;contain:layout paint}
+.mini-testimonials{grid-area:quotes;position:relative;min-height:150px;margin-top:8px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 25px rgba(16,22,42,.06);overflow:hidden;contain:layout paint}
 .mini-testimonial{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:22px 66px 22px 24px;pointer-events:none}
 .mini-testimonial.active{display:flex;animation:mini-testimonial-in .32s ease-out both}
 .mini-testimonial p{margin:0 0 7px!important;color:var(--ink)!important;font-size:15px!important;font-weight:700;line-height:1.35}
@@ -120,7 +120,7 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 .mini-testimonial-progress span.active{height:21px;border-radius:5px;background:var(--blue)}
 @keyframes mini-testimonial-in{from{opacity:0;transform:translate3d(0,6px,0)}to{opacity:1;transform:none}}
 @media(max-width:900px){.intro-grid{grid-template-areas:"index" "visual" "copy" "quotes";grid-template-columns:1fr;gap:24px}.intro-visual{min-height:340px}.intro-copy{max-width:none}.mini-testimonials{margin-top:0}}
-@media(max-width:600px){.intro-visual{min-height:300px}.mini-testimonials{min-height:112px}.mini-testimonial{padding:20px 50px 20px 18px}.mini-testimonial p{font-size:14px!important}}
+@media(max-width:600px){.intro-visual{min-height:300px}.mini-testimonials{min-height:205px}.mini-testimonial{padding:20px 50px 20px 18px}.mini-testimonial p{font-size:14px!important}}
 
 /* Rendimiento: el navegador omite el dibujo de secciones fuera de pantalla. */
 .section{content-visibility:auto;contain-intrinsic-size:1px 760px}
