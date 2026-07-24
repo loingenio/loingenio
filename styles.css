@@ -197,3 +197,10 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 @media(max-width:900px){.benefits-grid{grid-template-columns:1fr;gap:26px}.journey-simple{min-height:245px;max-width:430px}.journey-simple .node-goal{right:12%;top:6%}.journey-simple .rocket-wrap{left:12%;bottom:4%}.benefit-copy h2{font-size:clamp(43px,7vw,56px)}}
 @media(max-width:600px){.benefits{padding-top:58px;padding-bottom:58px}.benefits-grid{gap:22px}.journey-simple{min-height:210px;max-width:330px}.journey-simple:after{left:26%;top:54%;width:50%}.journey-simple .node-goal{right:10%;top:4%}.journey-simple .rocket-wrap{left:10%;bottom:0}.benefit-copy h2{font-size:40px;line-height:1.04}.benefit-list>div{padding:9px 0}@keyframes rocket-to-goal{0%,12%{transform:translate3d(0,0,0) rotate(34deg)}72%,100%{transform:translate3d(135px,-78px,0) rotate(34deg)}}}
 @media(prefers-reduced-motion:reduce),(update:slow){.journey-simple .rocket-wrap{animation:none;transform:translate3d(72px,-42px,0) rotate(34deg)}}
+
+/* Identidad global del footer */
+.footer-logo.footer-mark{display:block;width:58px;height:58px}
+.footer-logo.footer-mark img{display:block;width:100%;height:100%;object-fit:contain;filter:brightness(0) invert(1)}
+.footer-grid>div:first-child>p{margin-top:15px;color:#fff;font-size:15px}
+.social-links img{display:block;width:19px;height:19px;object-fit:contain;filter:brightness(0) invert(1)}
+@media(max-width:600px){.footer-logo.footer-mark{width:50px;height:50px}}
