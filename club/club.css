@@ -132,3 +132,11 @@ a,button{touch-action:manipulation;-webkit-tap-highlight-color:rgba(41,112,255,.
 .social-links img{display:block;width:19px;height:19px;object-fit:contain;filter:brightness(0) invert(1)}
 .social-links svg{display:none}.social-links a{position:relative}.social-links a:before{content:"";width:19px;height:19px;background:#fff;mask-repeat:no-repeat;mask-position:center;mask-size:contain;-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;-webkit-mask-size:contain}.social-links a:nth-child(1):before{mask-image:url("/icon-instagram.svg");-webkit-mask-image:url("/icon-instagram.svg")}.social-links a:nth-child(2):before{mask-image:url("/icon-facebook.svg");-webkit-mask-image:url("/icon-facebook.svg")}.social-links a:nth-child(3):before{mask-image:url("/icon-youtube.svg");-webkit-mask-image:url("/icon-youtube.svg")}
 @media(max-width:620px){.footer-logo.footer-mark{width:50px;height:50px}}
+
+/* Esencia editorial: fotografías estáticas y un único gesto en Filosofía */
+.essence-photo{background-size:cover;transition:none}
+.essence-card:hover .essence-photo,.essence-card:focus .essence-photo{background-size:cover}
+.essence-copy{transition:none}
+.philosophy-mark>span{animation:philosophy-orbit 7s linear infinite;will-change:transform}
+@keyframes philosophy-orbit{0%{transform:translate3d(0,-7px,0) rotate(0)}25%{transform:translate3d(7px,0,0) rotate(8deg)}50%{transform:translate3d(0,7px,0) rotate(16deg)}75%{transform:translate3d(-7px,0,0) rotate(24deg)}100%{transform:translate3d(0,-7px,0) rotate(32deg)}}
+@media(update:slow){.philosophy-mark>span{animation:none;will-change:auto}}
