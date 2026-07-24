@@ -161,3 +161,25 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 @keyframes journey-flight{0%,100%{transform:translate3d(-17px,18px,0) rotate(-8deg)}25%{transform:translate3d(8px,-8px,0) rotate(3deg)}50%{transform:translate3d(19px,-28px,0) rotate(8deg)}75%{transform:translate3d(-5px,-10px,0) rotate(-2deg)}}
 @media(max-width:600px){.journey-visual{min-height:420px}.journey-route{left:13%;top:18%;width:74%;height:60%}.journey-node{width:62px;height:62px}.node-ideas{left:6%;top:41%}.node-time{right:5%;top:49%}.node-goal{left:41%;top:8%}.idea-symbol{width:39px;height:39px;font-size:23px}.clock-symbol{width:39px;height:39px;border-width:6px}.clock-symbol:before,.clock-symbol:after{left:14px;top:5px;height:13px}.clock-symbol:after{top:8px;height:10px}.clock-symbol b{left:12px;top:13px}.target-symbol{width:42px;height:42px;border-width:7px;box-shadow:inset 0 0 0 5px #fff}.target-symbol b{width:11px;height:11px}.rocket-wrap{left:41%;top:34%;width:66px;height:118px}.rocket-body{left:12px;width:43px;height:84px}.rocket-body:before{left:10px;width:18px}.rocket-window{left:10px}.rocket-fin{top:51px;width:24px;height:37px}.rocket-flame{left:24px;top:80px}.journey-message{left:6%;bottom:7%;padding:12px 15px}.journey-message strong{font-size:18px}}
 @media(prefers-reduced-motion:reduce),(update:slow){.rocket-wrap{animation:none;transform:translate3d(0,-8px,0)}}
+
+/* Versión compacta de la sección de beneficios */
+.benefits{padding-top:88px;padding-bottom:88px}
+.benefits-grid{grid-template-columns:.82fr 1.18fr;gap:72px}
+.journey-visual{min-height:400px}
+.journey-route{left:15%;top:15%;width:69%;height:62%}
+.journey-node{width:62px;height:62px}
+.journey-node>span{top:calc(100% + 4px);padding:3px 8px;font-size:10px}
+.idea-symbol{width:39px;height:39px;font-size:23px}
+.clock-symbol{width:39px;height:39px;border-width:6px}
+.clock-symbol:before,.clock-symbol:after{left:14px;top:5px;height:13px}.clock-symbol:after{top:8px;height:10px}.clock-symbol b{left:12px;top:13px}
+.target-symbol{width:42px;height:42px;border-width:7px;box-shadow:inset 0 0 0 5px #fff}.target-symbol b{width:11px;height:11px}
+.rocket-wrap{left:42%;top:32%;width:64px;height:110px}
+.rocket-body{left:11px;width:42px;height:80px}.rocket-body:before{left:9px;width:18px;height:21px}.rocket-window{left:10px;top:27px;width:17px;height:17px}
+.rocket-fin{top:48px;width:23px;height:34px}.rocket-flame{left:23px;top:76px;width:18px;height:29px}
+.journey-message{left:6%;bottom:6%;padding:11px 14px;box-shadow:5px 5px 0 var(--yellow)}
+.journey-message small{font-size:8px}.journey-message strong{font-size:17px}
+.benefit-copy h2{font-size:43px;margin-bottom:20px}
+.benefit-list>div{grid-template-columns:38px 1fr;padding:11px 0}
+.benefit-list span{font-size:10px}.benefit-list strong{font-size:15px}.benefit-list p{font-size:13px;line-height:1.4}
+@media(max-width:900px){.benefits{padding-top:76px;padding-bottom:76px}.benefits-grid{gap:48px}.journey-visual{min-height:380px}}
+@media(max-width:600px){.benefits{padding-top:66px;padding-bottom:66px}.benefits-grid{gap:38px}.journey-visual{min-height:340px}.journey-route{left:14%;top:17%;width:72%;height:58%}.journey-node{width:54px;height:54px}.node-ideas{left:6%;top:39%}.node-time{right:5%;top:46%}.node-goal{left:41%;top:7%}.idea-symbol{width:34px;height:34px;font-size:20px}.clock-symbol{width:34px;height:34px;border-width:5px}.clock-symbol:before,.clock-symbol:after{left:12px;top:4px;height:12px}.clock-symbol:after{top:7px;height:9px}.clock-symbol b{left:10px;top:11px}.target-symbol{width:36px;height:36px;border-width:6px;box-shadow:inset 0 0 0 4px #fff}.target-symbol b{width:9px;height:9px}.rocket-wrap{left:40%;top:31%;width:58px;height:100px}.rocket-body{left:10px;width:39px;height:74px}.rocket-body:before{left:8px;width:17px}.rocket-window{left:9px;top:25px;width:16px;height:16px}.rocket-fin{top:44px;width:21px;height:32px}.rocket-flame{left:21px;top:70px;width:17px;height:27px}.journey-message{left:5%;bottom:5%;padding:9px 12px}.journey-message strong{font-size:15px}.benefit-copy h2{font-size:35px}.benefit-list>div{grid-template-columns:32px 1fr;padding:10px 0}.benefit-list strong{font-size:14px}.benefit-list p{font-size:12px}}
