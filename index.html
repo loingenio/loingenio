@@ -19,7 +19,7 @@
   <title>Lo Ingenio | Educación con propósito para niños y familias</title>
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="stylesheet" href="styles.css?v=20260724-9">
+  <link rel="stylesheet" href="styles.css?v=20260724-10">
   <script src="script.js?v=20260724-2" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"EducationalOrganization","@id":"https://www.loingenio.org/#organization","name":"Lo Ingenio","alternateName":["LoIngenio","loingenio.org"],"url":"https://www.loingenio.org/","logo":{"@type":"ImageObject","url":"https://www.loingenio.org/logo-lo-ingenio.png","contentUrl":"https://www.loingenio.org/logo-lo-ingenio.png","width":640,"height":165},"email":"hola@loingenio.org","contactPoint":{"@type":"ContactPoint","contactType":"Información y atención a familias","email":"hola@loingenio.org","availableLanguage":"Spanish"},"description":"Plataforma educativa chilena que crea recursos, cursos, talleres y experiencias de aprendizaje para desarrollar habilidades para la vida en niños y niñas.","slogan":"Educación con propósito","areaServed":["Chile","Latinoamérica"],"sameAs":["https://www.instagram.com/loingenio","https://www.facebook.com/loingenio/","https://www.youtube.com/@loingeniotv"]},{"@type":"WebSite","@id":"https://www.loingenio.org/#website","url":"https://www.loingenio.org/","name":"Lo Ingenio","alternateName":["LoIngenio","loingenio.org"],"inLanguage":"es-CL","publisher":{"@id":"https://www.loingenio.org/#organization"}},{"@type":"WebPage","@id":"https://www.loingenio.org/#webpage","url":"https://www.loingenio.org/","name":"Lo Ingenio | Educación con propósito para niños y familias","description":"Plataforma educativa chilena con recursos, cursos y talleres para niños y familias.","isPartOf":{"@id":"https://www.loingenio.org/#website"},"about":{"@id":"https://www.loingenio.org/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.loingenio.org/images/taller-ninos-aprendiendo.webp"},"inLanguage":"es-CL"}]}
@@ -128,17 +128,16 @@
               <div class="contact-form-grid">
                 <label><span>Nombre</span><input type="text" name="fields[name]" autocomplete="given-name" placeholder="Tu nombre"></label>
                 <label><span>Apellido</span><input type="text" name="fields[last_name]" autocomplete="family-name" placeholder="Tu apellido"></label>
-                <label class="form-wide"><span>Correo electrónico</span><input type="email" name="fields[email]" autocomplete="email" placeholder="nombre@correo.com" required></label>
-                <label class="form-wide"><span>País</span><input type="text" name="fields[country]" autocomplete="country-name" placeholder="Tu país" required></label>
+                <label><span>Correo electrónico</span><input type="email" name="fields[email]" autocomplete="email" placeholder="nombre@correo.com" required></label>
+                <label><span>País</span><input type="text" name="fields[country]" autocomplete="country-name" placeholder="Tu país" required></label>
                 <label class="form-wide"><span>Mensaje</span><textarea name="fields[company]" maxlength="1024" rows="4" placeholder="Cuéntanos cómo podemos ayudarte"></textarea></label>
               </div>
               <input type="hidden" name="ml-submit" value="1">
               <input type="hidden" name="anticsrf" value="true">
               <div class="ml-form-embedSubmit">
                 <button type="submit" class="contact-submit primary">Enviar mensaje <span aria-hidden="true">→</span></button>
-                <button type="button" class="contact-submit loading" disabled hidden><span class="ml-form-embedSubmitLoad" aria-hidden="true"></span><span class="sr-only">Enviando mensaje</span></button>
+                <button type="button" class="contact-submit loading" disabled style="display:none"><span class="ml-form-embedSubmitLoad" aria-hidden="true"></span><span class="sr-only">Enviando mensaje</span></button>
               </div>
-              <p class="form-note">Al enviar, tus datos se almacenarán de forma segura en MailerLite para responder tu consulta.</p>
             </form>
           </div>
           <div class="row-success contact-success" hidden>
@@ -147,7 +146,6 @@
             <p>Recibimos tu mensaje correctamente. Nos pondremos en contacto contigo pronto.</p>
           </div>
         </div>
-        <div class="cta-doodle" aria-hidden="true">✦</div>
       </div>
     </section>
   </main>
