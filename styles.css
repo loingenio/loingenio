@@ -68,40 +68,6 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 
 .cta-section .cta-inner>p:not(.eyebrow){max-width:760px}.cta-contact{display:flex;flex-direction:column;align-items:center;gap:10px}.cta-contact>span{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.cta-contact .button{gap:18px}.cta-contact .button b{font-size:18px}@media(max-width:600px){.cta-section h2{font-size:44px}.cta-section .cta-inner>p:not(.eyebrow){font-size:16px}.cta-contact .button{font-size:15px}}
 
-/* Formulario de contacto conectado a MailerLite */
-.cta-form-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,480px);gap:clamp(40px,6vw,80px);align-items:center;text-align:left}
-.cta-form-layout .eyebrow{justify-content:flex-start}
-.cta-form-layout h2{font-size:clamp(48px,6vw,76px);margin:22px 0}
-.cta-form-layout .cta-copy>p:not(.eyebrow){max-width:620px;margin:0 0 25px;font-size:17px}
-.cta-email{display:inline-flex;align-items:center;gap:12px;padding-bottom:4px;border-bottom:2px solid rgba(255,255,255,.7);font-weight:800}
-.cta-email span{transition:transform .2s}
-.cta-email:hover span{transform:translate(3px,-3px)}
-.contact-form-card{position:relative;z-index:2;width:100%;max-width:480px;padding:25px;border:2px solid var(--ink);border-radius:24px;background:#fff;color:var(--ink);box-shadow:8px 8px 0 var(--yellow)}
-.contact-form-card .form-kicker{margin:0 0 5px!important;color:var(--blue);font-size:10px!important;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
-.contact-form-card h3{margin:0 0 17px;font-size:22px;line-height:1.15}
-.contact-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.contact-form-grid label{display:flex;flex-direction:column;gap:6px;text-align:left}
-.contact-form-grid label>span{font-size:11px;font-weight:800}
-.contact-form-grid .form-wide{grid-column:1/-1}
-.contact-form-grid input,.contact-form-grid textarea{width:100%;min-height:42px;border:1px solid rgba(16,22,42,.2);border-radius:11px;background:#f6f7fb;color:var(--ink);font:inherit;font-size:14px;padding:9px 11px;outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
-.contact-form-grid textarea{min-height:74px;resize:vertical}
-.contact-form-grid input:focus,.contact-form-grid textarea:focus{border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(41,112,255,.14)}
-.contact-form-grid input::placeholder,.contact-form-grid textarea::placeholder{color:#778196}
-.ml-form-embedSubmit{margin-top:12px}
-.contact-submit{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:46px;border:0;border-radius:999px;background:var(--purple);color:#fff;padding:11px 18px;font:800 14px/1 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;cursor:pointer;transition:transform .2s,background .2s}
-.contact-submit:hover{background:#6847f2;transform:translateY(-2px)}
-.contact-submit.loading{justify-content:center;cursor:wait}
-.ml-form-embedSubmitLoad{display:inline-block;width:18px;height:18px;border:3px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:contact-spin .8s linear infinite}
-.contact-success{min-height:285px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
-.contact-success[hidden]{display:none}
-.contact-success>span{display:grid;place-items:center;width:58px;height:58px;margin-bottom:20px;border-radius:50%;background:var(--green);font-size:27px;font-weight:900}
-.contact-success h3{margin-bottom:10px}
-.contact-success p{max-width:330px!important;margin:0!important;color:#657083;font-size:15px!important}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@keyframes contact-spin{to{transform:rotate(360deg)}}
-@media(max-width:900px){.cta-form-layout{grid-template-columns:1fr;max-width:720px}.cta-form-layout .cta-copy{text-align:center}.cta-form-layout .eyebrow{justify-content:center}.cta-form-layout .cta-copy>p:not(.eyebrow){margin-left:auto;margin-right:auto}.contact-form-card{margin:auto}}
-@media(max-width:600px){.cta-form-layout{gap:32px}.cta-form-layout h2{font-size:44px}.contact-form-card{padding:21px 17px;border-radius:20px;box-shadow:6px 6px 0 var(--yellow)}.contact-form-grid{grid-template-columns:1fr}.contact-form-grid label{grid-column:1}.contact-form-card h3{font-size:20px;margin-bottom:14px}.cta-email{font-size:14px}}
-
 .course-icon,.course-symbol{display:grid;place-items:center;width:58px;height:58px;border-radius:18px}.course-icon svg,.course-symbol svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.coral-icon{background:rgba(255,122,69,.16);color:var(--coral)}.turquoise-icon{background:rgba(53,201,232,.18);color:var(--turquoise-dark)}.purple-icon{background:rgba(124,92,255,.14);color:var(--purple)}.course-symbol{justify-self:end;width:48px;height:48px;border:1px solid var(--line);border-radius:50%;color:var(--blue);transition:.25s}.course-symbol svg{width:23px;height:23px}.course-item:hover .course-symbol{background:var(--blue);border-color:var(--blue);color:#fff;transform:scale(1.06)}.course-name p{max-width:660px}.course-item{grid-template-columns:80px 1fr 2.2fr 60px}@media(max-width:900px){.course-item{grid-template-columns:68px 1fr 52px}.course-icon{grid-column:1;grid-row:1 / 3}.course-symbol{grid-column:3;grid-row:1 / 3}.course-type{grid-column:2;grid-row:1}.course-name{grid-column:2;grid-row:2}}@media(max-width:600px){.course-item{grid-template-columns:55px 1fr 42px;gap:12px}.course-icon{width:48px;height:48px;border-radius:14px}.course-icon svg{width:24px;height:24px}.course-symbol{width:38px;height:38px}.course-symbol svg{width:19px;height:19px}.course-type{font-size:10px}.course-name h3{font-size:18px}}
 
 .course-item{grid-template-columns:80px minmax(150px,.8fr) minmax(0,2.2fr)}.course-icon{width:60px;height:60px}.course-icon svg{width:30px;height:30px;stroke-width:1.9;vector-effect:non-scaling-stroke}.course-item:hover .course-icon{transform:translateY(-2px);transition:transform .2s}@media(max-width:900px){.course-item{grid-template-columns:68px minmax(0,1fr)}.course-icon{grid-column:1;grid-row:1 / 3}.course-type{grid-column:2;grid-row:1}.course-name{grid-column:2;grid-row:2}}@media(max-width:600px){.course-item{grid-template-columns:55px minmax(0,1fr)}.course-icon{width:48px;height:48px}.course-icon svg{width:25px;height:25px}}
