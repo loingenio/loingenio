@@ -183,3 +183,17 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}h1
 .benefit-list span{font-size:10px}.benefit-list strong{font-size:15px}.benefit-list p{font-size:13px;line-height:1.4}
 @media(max-width:900px){.benefits{padding-top:76px;padding-bottom:76px}.benefits-grid{gap:48px}.journey-visual{min-height:380px}}
 @media(max-width:600px){.benefits{padding-top:66px;padding-bottom:66px}.benefits-grid{gap:38px}.journey-visual{min-height:340px}.journey-route{left:14%;top:17%;width:72%;height:58%}.journey-node{width:54px;height:54px}.node-ideas{left:6%;top:39%}.node-time{right:5%;top:46%}.node-goal{left:41%;top:7%}.idea-symbol{width:34px;height:34px;font-size:20px}.clock-symbol{width:34px;height:34px;border-width:5px}.clock-symbol:before,.clock-symbol:after{left:12px;top:4px;height:12px}.clock-symbol:after{top:7px;height:9px}.clock-symbol b{left:10px;top:11px}.target-symbol{width:36px;height:36px;border-width:6px;box-shadow:inset 0 0 0 4px #fff}.target-symbol b{width:9px;height:9px}.rocket-wrap{left:40%;top:31%;width:58px;height:100px}.rocket-body{left:10px;width:39px;height:74px}.rocket-body:before{left:8px;width:17px}.rocket-window{left:9px;top:25px;width:16px;height:16px}.rocket-fin{top:44px;width:21px;height:32px}.rocket-flame{left:21px;top:70px;width:17px;height:27px}.journey-message{left:5%;bottom:5%;padding:9px 12px}.journey-message strong{font-size:15px}.benefit-copy h2{font-size:35px}.benefit-list>div{grid-template-columns:32px 1fr;padding:10px 0}.benefit-list strong{font-size:14px}.benefit-list p{font-size:12px}}
+
+/* Composición esencial: nave y meta directamente sobre el fondo */
+.benefits{padding-top:76px;padding-bottom:76px}
+.benefits-grid{grid-template-columns:.58fr 1.42fr;gap:68px}
+.journey-simple{min-height:300px;overflow:visible;background:transparent;border-radius:0;box-shadow:none}
+.journey-simple:before{display:none}
+.journey-simple:after{content:"";position:absolute;left:24%;top:51%;width:55%;border-top:2px dashed rgba(41,112,255,.35);transform:rotate(-27deg);transform-origin:left center}
+.journey-simple .node-goal{left:auto;right:8%;top:9%;z-index:3}
+.journey-simple .rocket-wrap{left:10%;top:auto;bottom:8%;z-index:4;animation:rocket-to-goal 4.8s ease-in-out infinite}
+.benefit-copy h2{max-width:760px;font-size:clamp(46px,4.8vw,60px);line-height:1.02;letter-spacing:-.05em}
+@keyframes rocket-to-goal{0%,12%{transform:translate3d(0,0,0) rotate(34deg)}72%,100%{transform:translate3d(175px,-105px,0) rotate(34deg)}}
+@media(max-width:900px){.benefits-grid{grid-template-columns:1fr;gap:26px}.journey-simple{min-height:245px;max-width:430px}.journey-simple .node-goal{right:12%;top:6%}.journey-simple .rocket-wrap{left:12%;bottom:4%}.benefit-copy h2{font-size:clamp(43px,7vw,56px)}}
+@media(max-width:600px){.benefits{padding-top:58px;padding-bottom:58px}.benefits-grid{gap:22px}.journey-simple{min-height:210px;max-width:330px}.journey-simple:after{left:26%;top:54%;width:50%}.journey-simple .node-goal{right:10%;top:4%}.journey-simple .rocket-wrap{left:10%;bottom:0}.benefit-copy h2{font-size:40px;line-height:1.04}.benefit-list>div{padding:9px 0}@keyframes rocket-to-goal{0%,12%{transform:translate3d(0,0,0) rotate(34deg)}72%,100%{transform:translate3d(135px,-78px,0) rotate(34deg)}}}
+@media(prefers-reduced-motion:reduce),(update:slow){.journey-simple .rocket-wrap{animation:none;transform:translate3d(72px,-42px,0) rotate(34deg)}}
