@@ -75,3 +75,37 @@ if (testimonialWrap && 'IntersectionObserver' in window) {
 }
 document.addEventListener('visibilitychange', scheduleTestimonial);
 reduceMotion.addEventListener?.('change', scheduleTestimonial);
+
+const mailerLiteForm = document.querySelector('[data-mailerlite-form]');
+let mailerLiteLoaded = false;
+
+function ml_webform_success_44111574() {
+  const formBody = mailerLiteForm?.querySelector('.row-form');
+  const successBody = mailerLiteForm?.querySelector('.row-success');
+  if (formBody) formBody.hidden = true;
+  if (successBody) successBody.hidden = false;
+}
+
+const loadMailerLite = () => {
+  if (!mailerLiteForm || mailerLiteLoaded) return;
+  mailerLiteLoaded = true;
+  const script = document.createElement('script');
+  script.src = 'https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519';
+  script.async = true;
+  document.head.appendChild(script);
+  fetch('https://assets.mailerlite.com/jsonp/2514975/forms/193908274732467554/takel', {
+    mode: 'no-cors',
+    credentials: 'omit'
+  }).catch(() => {});
+};
+
+if (mailerLiteForm && 'IntersectionObserver' in window) {
+  const mailerLiteObserver = new IntersectionObserver(([entry], observer) => {
+    if (!entry.isIntersecting) return;
+    loadMailerLite();
+    observer.disconnect();
+  }, { rootMargin: '500px 0px' });
+  mailerLiteObserver.observe(mailerLiteForm);
+} else {
+  loadMailerLite();
+}
