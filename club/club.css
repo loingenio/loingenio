@@ -133,6 +133,11 @@ a,button{touch-action:manipulation;-webkit-tap-highlight-color:rgba(41,112,255,.
 .social-links svg{display:none}.social-links a{position:relative}.social-links a:before{content:"";width:19px;height:19px;background:#fff;mask-repeat:no-repeat;mask-position:center;mask-size:contain;-webkit-mask-repeat:no-repeat;-webkit-mask-position:center;-webkit-mask-size:contain}.social-links a:nth-child(1):before{mask-image:url("/icon-instagram.svg");-webkit-mask-image:url("/icon-instagram.svg")}.social-links a:nth-child(2):before{mask-image:url("/icon-facebook.svg");-webkit-mask-image:url("/icon-facebook.svg")}.social-links a:nth-child(3):before{mask-image:url("/icon-youtube.svg");-webkit-mask-image:url("/icon-youtube.svg")}
 @media(max-width:620px){.footer-logo.footer-mark{width:50px;height:50px}}
 
+/* Migas de pan discretas para orientar la navegación y reforzar la jerarquía. */
+.breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:20px;color:#52647f;font-size:11px;font-weight:750}
+.breadcrumb a{text-decoration:underline;text-underline-offset:3px}
+.breadcrumb a:hover{color:var(--blue)}
+
 /* Esencia editorial: fotografías estáticas y un único gesto en Filosofía */
 .essence-photo{background-size:cover;transition:none}
 .essence-card:hover .essence-photo,.essence-card:focus .essence-photo{background-size:cover}
