@@ -10,3 +10,17 @@ footer{padding:45px 0;background:var(--navy);color:#fff}.footer-inner{display:fl
 /* Identidad global del footer */
 .footer-inner>div:first-child{display:flex;flex-direction:column;align-items:flex-start}.footer-logo.footer-mark{display:block;width:58px;height:58px}.footer-logo.footer-mark img{display:block;width:100%;height:100%;object-fit:contain;filter:brightness(0) invert(1)}.footer-inner>div:first-child p{margin-top:12px;color:#fff;font-size:14px}.social-links{display:flex;gap:10px}.social-links a{display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(255,255,255,.35);border-radius:50%}.social-links img{width:19px;height:19px;filter:brightness(0) invert(1)}@media(max-width:560px){.footer-logo.footer-mark{width:50px;height:50px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button:hover{transform:none}}
+
+/* Migas de pan y próximos pasos educativos. */
+.breadcrumb{display:flex;align-items:center;gap:7px;margin-bottom:18px;color:#687487;font-size:10px;font-weight:750}
+.breadcrumb a{text-decoration:underline;text-underline-offset:3px}.breadcrumb a:hover{color:var(--blue)}
+.related-links{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+.related-links a{display:flex;flex-direction:column;gap:5px;padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.related-links a:hover{border-color:var(--blue)}.related-links strong{font-size:15px}.related-links span{color:#687487;font-size:12px}
+@media(max-width:700px){.related-links{grid-template-columns:1fr}}
+
+.resource-guide{padding:82px 0 95px;background:#fff}
+.resource-guide h2{max-width:760px;margin:10px 0 28px;font-size:clamp(34px,4.5vw,54px);line-height:1.04;letter-spacing:-.045em}
+.resource-guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:900px}
+.resource-guide-grid p{margin:0;color:#637086;font-size:15px;line-height:1.75}
+@media(max-width:700px){.resource-guide-grid{grid-template-columns:1fr}.resource-guide{padding:65px 0 75px}}
