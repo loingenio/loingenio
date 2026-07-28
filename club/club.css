@@ -63,11 +63,10 @@ footer{background:var(--navy);color:#fff;padding:75px 0 25px}.footer-grid{displa
 .essence-action b{float:right;font-size:16px}
 .mission-card .essence-copy{background:var(--blue);color:#fff}
 .vision-card .essence-copy{background:var(--turquoise);color:var(--navy)}
-.essence-photo{position:relative;min-height:430px;background-position:center;background-size:cover;overflow:hidden;transition:background-size .6s}
+.essence-photo{position:relative;min-height:430px;background-position:center;background-size:cover;overflow:hidden}
 .essence-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,44,114,.55))}
-.mission-photo{background-image:url("/images/taller-ninos-aprendiendo.webp")}
-.vision-photo{background-image:url("/images/proyecto-creativo-nina.webp")}
-.essence-card:hover .essence-photo,.essence-card:focus .essence-photo{background-size:106%}
+.mission-photo{background-image:url("/images/mision-taller-colaborativo.webp")}
+.vision-photo{background-image:url("/images/vision-tecnologia-creativa.webp")}
 .photo-label{position:absolute;z-index:2;left:25px;bottom:23px;padding:7px 10px;border:1px solid rgba(255,255,255,.6);border-radius:999px;color:#fff;font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;backdrop-filter:blur(7px)}
 .philosophy-card{grid-template-columns:.7fr 1.3fr;background:var(--yellow);color:var(--navy)}
 .philosophy-mark{position:relative;display:grid;place-items:center;min-height:330px;overflow:hidden;background:var(--purple);color:#fff}
